@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/master"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <EditText
+        android:id="@+id/__name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="Class Name"
+        android:inputType="textPersonName|textCapCharacters"
+        android:textAllCaps="true" />
+
+    <CheckBox
+        android:id="@+id/hasDesc_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:checked="true"
+        android:hint="Has descendants (SuperClass)" />
+
+    <EditText
+        android:id="@+id/share_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Shares"
+        android:inputType="numberDecimal"
+        android:maxLength="4" />
+
+    <Spinner
+        android:id="@+id/__lvl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:contentDescription="Class Level" />
+
+    <Button
+        android:id="@+id/btn_done"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custombuttonstyle2"
+        android:text="Done" />
+
+</LinearLayout>

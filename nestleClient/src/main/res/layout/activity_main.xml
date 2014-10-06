@@ -1,0 +1,353 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- The main content view -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="@dimen/activity_vertical_margin">
+            <!-- Date display TextView -->
+            <TextView
+                android:id="@+id/textView_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_Buffet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_date"
+                android:background="@android:color/holo_blue_light"
+                android:padding="@dimen/view_horizontal_margin">
+
+                <LinearLayout
+                    android:id="@+id/MyCup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText_id4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:hint="4 MyCup"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:nextFocusDown="@+id/editText_id6"
+                        android:tag="MyCup:o|MyCup:n"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editText_id4n"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:focusableInTouchMode="true"
+                        android:hint="4 MyCup"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:nextFocusForward="@+id/editText_id6n"
+                        android:tag="MyCup:n|MyCup:o"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/coffeewithmilk"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MyCup"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editText_id6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/MyCup"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:hint="6 Coffee with milk"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:nextFocusDown="@+id/editText_id7"
+                        android:tag="Coffee with milk:o|Coffee with milk:n" />
+
+                    <EditText
+                        android:id="@+id/editText_id6n"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/MyCup"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:hint="6 Coffee with milk"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:nextFocusForward="@+id/editText_id7n"
+                        android:tag="Coffee with milk:n|Coffee with milk:o" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blackcoffee"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/coffeewithmilk"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editText_id7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/coffeewithmilk"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:hint="7 Black coffee"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:nextFocusDown="@+id/editText_id8"
+                        android:tag="Black coffee:o|Black coffee:n" />
+
+                    <EditText
+                        android:id="@+id/editText_id7n"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/coffeewithmilk"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:hint="7 Black coffee"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:nextFocusForward="@+id/editText_id8n"
+                        android:tag="Black coffee:n|Black coffee:o" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/espresso"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/blackcoffee"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editText_id8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/blackcoffee"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:hint="8 Espresso"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:tag="Espresso:o|Espresso:n" />
+
+                    <EditText
+                        android:id="@+id/editText_id8n"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/blackcoffee"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:hint="8 Espresso"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:tag="Espresso:n|Espresso:o" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_save1"
+                    style="?android:attr/buttonStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/espresso"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:text="Save" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/relativeLayout_Buffet"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_BuffetResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout_Buffet"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@android:color/holo_orange_light"
+                android:paddingBottom="@dimen/view_horizontal_margin">
+
+                <TextView
+                    android:id="@+id/textView_MyCup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/view_horizontal_margin"
+                    android:text="4 MyCup" />
+
+                <TextView
+                    android:id="@+id/textView_result_MyCup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView_MyCup"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/view_horizontal_margin"
+                    android:layout_toRightOf="@+id/textView_MyCup"
+                    android:gravity="right"
+                    android:tag="MyCup:n"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/sep1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_MyCup"
+                    android:layout_marginLeft="@dimen/view_horizontal_margin"
+                    android:layout_marginRight="@dimen/view_horizontal_margin"
+                    android:background="@android:color/holo_orange_dark" />
+
+                <TextView
+                    android:id="@+id/textView_CoffeeWithMilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sep1"
+                    android:layout_margin="@dimen/view_horizontal_margin"
+                    android:text="6 Coffee with milk" />
+
+                <TextView
+                    android:id="@+id/textView_result_CoffeeWithMilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView_CoffeeWithMilk"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/view_horizontal_margin"
+                    android:layout_toRightOf="@+id/textView_CoffeeWithMilk"
+                    android:gravity="right"
+                    android:tag="Coffee with milk:n"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/sep2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_CoffeeWithMilk"
+                    android:layout_marginLeft="@dimen/view_horizontal_margin"
+                    android:layout_marginRight="@dimen/view_horizontal_margin"
+                    android:background="@android:color/holo_orange_dark" />
+
+                <TextView
+                    android:id="@+id/textView_BlackCoffee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sep2"
+                    android:layout_margin="@dimen/view_horizontal_margin"
+                    android:text="7 Black coffee" />
+
+                <TextView
+                    android:id="@+id/textView_result_BlackCoffee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView_BlackCoffee"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/view_horizontal_margin"
+                    android:layout_toRightOf="@+id/textView_BlackCoffee"
+                    android:gravity="right"
+                    android:tag="Black coffee:n"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/sep3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_BlackCoffee"
+                    android:layout_marginLeft="@dimen/view_horizontal_margin"
+                    android:layout_marginRight="@dimen/view_horizontal_margin"
+                    android:background="@android:color/holo_orange_dark" />
+
+                <TextView
+                    android:id="@+id/textView_Espresso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sep3"
+                    android:layout_margin="@dimen/view_horizontal_margin"
+                    android:text="8 Espresso" />
+
+                <TextView
+                    android:id="@+id/textView_result_Espresso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView_Espresso"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/view_horizontal_margin"
+                    android:layout_toRightOf="@+id/textView_Espresso"
+                    android:gravity="right"
+                    android:tag="Espresso:n"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/shadow2"
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/relativeLayout_BuffetResults"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shadow2"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Load from old session"
+                    android:textStyle="italic" />
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    <!-- The navigation drawer -->
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#111"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+</android.support.v4.widget.DrawerLayout>

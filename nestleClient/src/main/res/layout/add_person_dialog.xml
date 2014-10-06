@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <EditText
+        android:id="@+id/__name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="NAME"
+        android:inputType="textPersonName|textCapCharacters"
+        android:textAllCaps="true">
+
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/__superClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+    <Button
+        android:id="@+id/btn_done"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custombuttonstyle2"
+        android:text="Done" />
+
+</LinearLayout>
